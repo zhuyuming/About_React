@@ -1,5 +1,5 @@
 #ant-design + ES6 + webpack 的集成解决方案
-
+##对 对 ant-design 和 webpack 还不是很了解，因此该项目中，还缺少很多东西，只是完成了最基本的 集成 ant-design 进来，可以单独使用
 使用步骤：
   1. 下载代码 ```git clone https://github.com/zhongxia245/About_React.git ```
   2. ```npm install```   或者 ```cnpm install```
