@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --hot --progress --colors",
-        "build": "webpack --progress --colors"
+        "build": "webpack -p --progress --colors",
+        "release": "webpack --config  webpack.config.release.js --progress --colors"
     },
     "repository": {
         "type": "git",
@@ -28,10 +29,11 @@
         "react-router": "^0.13.3",
         "webpack": "^1.12.2",
         "webpack-dev-server": "^1.11.0"
-
     },
     "dependencies": {
+        "file-loader": "^0.8.5",
         "lodash": "~3.10.1",
-        "react-kendo": "~0.13.11"
+        "react-kendo": "~0.13.11",
+        "url-loader": "^0.5.7"
     }
 }

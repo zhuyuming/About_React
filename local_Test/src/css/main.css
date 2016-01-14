@@ -1,0 +1,9 @@
+body {
+    font-family: '微软雅黑';
+    font-size: 15px;
+    background-image: url('../img/bg.png')
+}
+
+a {
+    float: none;
+}
