@@ -3,7 +3,7 @@
   1. 下载代码  `git clone https://github.com/zhongxia245/About_React.git`
   2. 进入 local_test 目录  `cd local_test` 
   3. 安装依赖包  `npm install`
-  4. 压缩打包代码 'webpack -p ' 或者 `npm run build` 
+  4. 压缩打包代码 `webpack -p` 或者 `npm run build` 
   5. 打包发布的版本 `webpack --config webpack.config.release.js`  或者 `npm run release` 
   6. 本地运行测试 `npm start`
   
