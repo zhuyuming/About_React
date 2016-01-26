@@ -11,7 +11,7 @@ const TabPane = Tabs.TabPane;
 
 const Main = React.createClass({
   getInitialState() {
-    return { visible: false,todos:[123,123,123,123,123] };
+    return { visible: false };
   },
   showModal() {
     this.setState({

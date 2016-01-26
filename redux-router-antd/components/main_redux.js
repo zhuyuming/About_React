@@ -11,7 +11,7 @@ const TabPane = Tabs.TabPane;
 
 const Main = React.createClass({
   getInitialState() {
-    return { visible: false,todos:[123,123,123,123,123] };
+    return { visible: false };
   },
   showModal() {
     this.setState({
@@ -31,7 +31,6 @@ const Main = React.createClass({
     });
   },
   addTodo(e){
-     
     if(e.target.value && e.which === 13){
         this.props.actions.addTodo(e.target.value);
         e.target.value = "";
@@ -51,9 +50,11 @@ const Main = React.createClass({
         <Tabs defaultActiveKey="1" onChange={this.callback}>
             <TabPane tab="TAB1" key="1">
                <Button type="primary" onClick={this.showModal}>添加</Button>
+               <input style={{marginLeft:'20px'}} onKeyDown={this.addTodo}/>
                 <Modal title="表单" visible={this.state.visible}
                   onOk={this.handleOk} onCancel={this.handleCancel}>
                 </Modal>
+                <Time todos={this.props.todos}/>
             </TabPane>
             <TabPane tab="TAB2" key="2">
                <Row>
