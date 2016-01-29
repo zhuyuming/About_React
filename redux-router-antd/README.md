@@ -1,11 +1,11 @@
 ## 如何运行
-1. git clone https://github.com/zhongxia245/About_React.git
-2. cd redux-router-antd && npm install
-3. npm start
-4. localhost:3000 访问
+1. ``git clone https://github.com/zhongxia245/About_React.git``
+2. ``cd redux-router-antd && npm install``
+3. ``npm start``
+4. ``localhost:3000`` 访问
 
 ## 如何打版发布
-1. npm run build 
+1. ``npm run build`` 
 2. 直接点击 index.html 就可以运行
 
 
