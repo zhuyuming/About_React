@@ -13,6 +13,7 @@
 2. redux 并没有完美的和 react-router 集成在一起，因为 router返回的是 ``this.props.children`` 这样的一个组件 ，使用方式是  ``{this.props.children}`` 这种方式，不知道如何赋值属性，这个是目前遇到的问题
 3. ``{this.props.children}`` 这种方式，如果直接修改 `this.props.children.props` 就报错了，显示``props`` 是不可修改的
 4. 目前 redux 是在每一个组件的文件中，去通用 ``connect`` 去把 `state` 和 `actions` 绑定到组件的 `props`中【可以在组件的 `index.js` 文件进行统一的绑定，这样维护起来就比较容易】==》 目前的解决方案
+
 ---
 
 ## 说明【早期】
