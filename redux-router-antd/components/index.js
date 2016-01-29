@@ -5,7 +5,7 @@
 export {default as Header} from './header';
 export {default as Footer} from './footer';
 export {default as Main} from './main';
-export {default as Main_redux} from './main_redux';
-export {default as Main1} from './main1';
 export {default as Welcome} from './welcome';
 export {default as Table} from './table';
+export {default as FormDemo} from './form';
+export {default as ErrorPage} from './error';

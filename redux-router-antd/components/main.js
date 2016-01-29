@@ -2,16 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Modal, Button,message,Timeline ,Row, Col,Tabs  } from 'antd';
 import FormDemo from './form'
-import configureStore from '../redux/store/configureStore'
 import Time from './time'
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { routeActions } from 'redux-simple-router'
+// action
+import TodoActions from '../redux/actions/index'
 
-const store = configureStore(); 
+
 const TabPane = Tabs.TabPane;
 
 const Main = React.createClass({
   getInitialState() {
-    return { visible: false,todos:[123,123,123,123,123] };
+    return { visible: false };
   },
   showModal() {
     this.setState({
@@ -31,7 +35,6 @@ const Main = React.createClass({
     });
   },
   addTodo(e){
-     
     if(e.target.value && e.which === 13){
         this.props.actions.addTodo(e.target.value);
         e.target.value = "";
@@ -46,17 +49,21 @@ const Main = React.createClass({
     //message.info('Tab change')
   },
 	render() {
+    console.log('main:',this.props)
 		return (
 			 <Row>
         <Tabs defaultActiveKey="1" onChange={this.callback}>
             <TabPane tab="TAB1" key="1">
                <Button type="primary" onClick={this.showModal}>添加</Button>
+               <input style={{marginLeft:'20px'}} onKeyDown={this.addTodo}/>
                 <Modal title="表单" visible={this.state.visible}
                   onOk={this.handleOk} onCancel={this.handleCancel}>
+                  <FormDemo/>
                 </Modal>
+                <Time todos={this.props.todos}/>
             </TabPane>
             <TabPane tab="TAB2" key="2">
-               <Row>
+              <Row>
                 <Col span="12" style={{border:'1px solid blue',height:'40px'}}> span12 </Col>
                 <Col span="12" style={{border:'1px solid blue',height:'40px'}}> span12 </Col>
               </Row>
@@ -79,6 +86,7 @@ const Main = React.createClass({
               </Row>
             </TabPane>
             <TabPane tab="TAB3" key="3">
+               <Time todos={this.props.todos}/>
             </TabPane>
         </Tabs>
       </Row>
@@ -86,4 +94,17 @@ const Main = React.createClass({
 	}
 });
 
-export default Main
+//用来关联redux
+function mapState(state) {
+  return {
+    todos: state.todos
+  };
+}
+
+function mapDispatch(dispatch) {
+  return {
+    actions: bindActionCreators(TodoActions, dispatch)
+  };
+}
+
+export default connect(mapState, mapDispatch)(Main);

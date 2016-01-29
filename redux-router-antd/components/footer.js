@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = React.createClass({
+const Footer =  React.createClass({
 	render() {
 		return (
 			<div className="ant-layout-footer" style={{position:'absolute',bottom:0,left:0,right:0,textAlign:'center'}}>
