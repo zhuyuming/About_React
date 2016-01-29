@@ -15,6 +15,12 @@
 4. 目前 redux 是在每一个组件的文件中，去通用 ``connect`` 去把 `state` 和 `actions` 绑定到组件的 `props`中【可以在组件的 `index.js` 文件进行统一的绑定，这样维护起来就比较容易】==》 目前的解决方案
 
 ---
+### 更新内容
+	20150130 00:46
+1. 增加了统一绑定action和state到组件的prop上
+2. 发布的时候，去掉了热部署，修改 .babelrc文件
+3. 抽取第三方类库出来，把第三方和自己编写的脚本分开打包（common.js 表示第三方类库，app.bundle.js 表示自己写的脚本）
+---
 
 ## 说明【早期】
 1. ~~在server.js 里面修改 webpack.config 或者 webpack.config_redux 来切换是否 React-router 的demo 和 Redux的DEMO~~
