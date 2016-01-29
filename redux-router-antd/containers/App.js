@@ -1,16 +1,14 @@
 import React,{Component} from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { routeActions } from 'redux-simple-router'
-import * as R from 'react-router'
-// action
-import TodoActions from '../redux/actions/index'
 // components
 import {Header,Footer} from '../components'
+import css from '../assets/css/antd.min.css'
+
+//自定义的方法，把redux 的actions 和 state 绑定到 组件的属性上
+import bind2Prop from '../redux/bind2Prop'
 
 const App = React.createClass({
   render() {
-    console.log('App:',this.props,R)
+    console.log('App:',this.props)
     return ( 
     <div>
       <Header/>
@@ -21,17 +19,5 @@ const App = React.createClass({
 });
 
 //用来关联redux
-function mapState(state) {
-  return {
-    todos: state.todos
-  };
-}
-
-function mapDispatch(dispatch) {
-  return {
-    actions: bindActionCreators(TodoActions, dispatch)
-  };
-}
-
-export default connect(mapState, mapDispatch)(App);
+export default bind2Prop(App);
 

@@ -4,20 +4,26 @@ var webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './index'
-  ],
+  entry: {
+    app: [
+      'webpack-hot-middleware/client',
+      './index'
+    ],
+    common:'./common'
+  },
   output: {
     path: path.join(__dirname, 'static'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.DefinePlugin({'process.env.NODE_ENV': '"development"'}),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"development"'
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('common.js')
   ],
   module: {
     loaders: [{
@@ -35,4 +41,3 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   }
 }
-

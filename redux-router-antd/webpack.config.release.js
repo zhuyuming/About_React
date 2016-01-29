@@ -3,20 +3,20 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: [
-    'webpack-hot-middleware/client',
-    './index'
-  ],
+  entry: {
+    app: './index',
+    common:'./common'
+  },
   output: {
     path: path.join(__dirname, 'static'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/static/'
   },
   plugins: [
     new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('common.js')
   ],
   module: {
     loaders: [{

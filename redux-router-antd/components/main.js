@@ -4,13 +4,6 @@ import { Modal, Button,message,Timeline ,Row, Col,Tabs  } from 'antd';
 import FormDemo from './form'
 import Time from './time'
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { routeActions } from 'redux-simple-router'
-// action
-import TodoActions from '../redux/actions/index'
-
-
 const TabPane = Tabs.TabPane;
 
 const Main = React.createClass({
@@ -94,17 +87,4 @@ const Main = React.createClass({
 	}
 });
 
-//用来关联redux
-function mapState(state) {
-  return {
-    todos: state.todos
-  };
-}
-
-function mapDispatch(dispatch) {
-  return {
-    actions: bindActionCreators(TodoActions, dispatch)
-  };
-}
-
-export default connect(mapState, mapDispatch)(Main);
+export default Main;
