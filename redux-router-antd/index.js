@@ -13,12 +13,10 @@ const store = configureStore();
 reduxRouterMiddleware.listenForReplays(store)
 
 ReactDOM.render(
-  <div>
-    <Provider store={store}>
-      <Router history={history}>
-        {getRoutes()}
-      </Router>
-    </Provider>
-  </div>,
+  <Provider store={store}>
+    <Router history={history}>
+      {getRoutes()}
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );

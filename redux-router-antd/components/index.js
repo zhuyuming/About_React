@@ -13,6 +13,7 @@ import pre_Welcome from './welcome';
 import pre_Table from './table';
 import pre_FormDemo from './form';
 import pre_ErrorPage from './error';
+import pre_Layout from './Layout'; 
 
 // 导出组件(记得绑定上state 和 actions 到 props 上)
 export const Header = bind2Prop(pre_Header) 
@@ -22,3 +23,4 @@ export const Welcome = bind2Prop(pre_Welcome)
 export const Table = bind2Prop(pre_Table) 
 export const FormDemo = bind2Prop(pre_FormDemo) 
 export const ErrorPage = bind2Prop(pre_ErrorPage) 
+export const Layout = bind2Prop(pre_Layout) 

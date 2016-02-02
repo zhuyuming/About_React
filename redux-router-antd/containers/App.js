@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 // components
-import {Header,Footer} from '../components'
+import {Header,Footer,Layout} from '../components'
 import css from '../assets/css/antd.min.css'
 
 //自定义的方法，把redux 的actions 和 state 绑定到 组件的属性上
@@ -11,12 +11,22 @@ const App = React.createClass({
     console.log('App:',this.props)
     return ( 
     <div>
-      <Header/>
-      {this.props.children}
-      <Footer/>
+      <Layout content={this.props.children}/>
     </div> );
   }
 });
+
+// const App = React.createClass({
+//   render() {
+//     console.log('App:',this.props)
+//     return ( 
+//     <div>
+//       <Header/>
+//       {this.props.children}
+//       <Footer/>
+//     </div> );
+//   }
+// });
 
 //用来关联redux
 export default bind2Prop(App);
