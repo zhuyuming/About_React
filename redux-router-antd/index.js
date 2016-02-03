@@ -7,6 +7,7 @@ import {Router, Route} from 'react-router';
 import configureStore, {history, reduxRouterMiddleware} from './redux/store/configureStore'
 
 import {getRoutes} from './routers';
+import App from './containers/App';
 
 //创建仓库，并把 redux 和 react-router 合起来
 const store = configureStore();
