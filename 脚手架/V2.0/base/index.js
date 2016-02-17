@@ -1,0 +1,3 @@
+window.BDOS = {
+    name:'zhongxia'
+}

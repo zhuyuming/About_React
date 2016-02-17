@@ -1,0 +1,6 @@
+v1.0功能说明
+1、抛出模块中的所有组件
+2、抛出模块中的所有action 和 reducers，然后redux 已经做了处理，整合所有抛出的 action 和reducer. 每新增一个模块，需要在 redux 中的 actions 和 reducers中做一次整合
+3、新增一个模块，需要改变的位置
+	3.1、在 modules 文件夹中 新增一个模块，模块内部自己定义，或者参照现有的 main 模块，每个模块必须有一个index.js [方便外部访问，整合]
+	3.2、新增完模块之后，需要在redux/actions  和 redux/reducers 整合模块抛出来的 action和 reducer

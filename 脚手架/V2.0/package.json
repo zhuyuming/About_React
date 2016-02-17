@@ -1,0 +1,28 @@
+{
+    "name": "react-project-scaffold",
+    "version": "0.0.0",
+    "description": "项目开发的脚手架",
+    "scripts": {
+        "start": "node project1/server.js",
+        "project2": "node project2/server.js",
+        "build": "webpack --progress -c --optimize-minimize  --config project1/webpack.config.release.js "
+    },
+    "license": "MIT",
+    "dependencies": {
+        "classnames": "^2.1.2",
+        "history": "^1.13.1",
+        "react": "~0.14.2",
+        "react-dom": "~0.14.2",
+        "react-router": "^1.0.0",
+        "react-hot-loader": "^1.3.0"
+    },
+    "devDependencies": {
+        "antd": "0.10.x",
+        "babel-core": "^5.6.18",
+        "babel-loader": "^5.1.4",
+        "express": "^4.13.3",
+        "css-loader": "^0.19.0",
+        "webpack": "^1.9.11",
+        "webpack-dev-server": "~1.12.1"
+    }
+}
