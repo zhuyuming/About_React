@@ -21,7 +21,7 @@ module.exports = {
   
     //当前路由返回的控件
     getComponent(location, cb) {
-        require.ensure([], (require) => {
+        require.ensure([], (require) => {  
             //   cb(null, require('./components/Calendar'))
             cb(null, require('./components/Layout'))
         })

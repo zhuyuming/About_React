@@ -1,4 +1,4 @@
-global.COURSES = [
+window.COURSES = [
   {
     id: 0,
     name: 'React Fundamentals',

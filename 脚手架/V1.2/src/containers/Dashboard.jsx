@@ -7,7 +7,7 @@ class Dashboard extends React.Component {
 
     return (
       <div>
-        <h2>Super Scalable Apps</h2>
+        <h2>Super Scalable Apps  zhongxia</h2>
         <p>
           Open the network tab as you navigate. Notice that only the amount of
           your app that is required is actually downloaded as you navigate
