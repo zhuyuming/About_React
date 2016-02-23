@@ -4,8 +4,8 @@ var webpack = require('webpack')
 
 module.exports = {
     entry: {
-        app: './index',
-        common: './common'
+        app: './src/index',
+        common: './src/common'
     },
     output: {
         path: path.join(__dirname, 'static'),

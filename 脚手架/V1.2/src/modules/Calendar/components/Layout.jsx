@@ -7,7 +7,6 @@ const SubMenu = Menu.SubMenu;
 
 class Layout extends React.Component {
     render() {
-        console.log('layout==>',this.props)
         return (
         <div className="ant-layout-topaside">
             <div className="ant-layout-wrapper">

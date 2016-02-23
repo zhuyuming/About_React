@@ -12,8 +12,6 @@ module.exports = {
         require.ensure([], (require) => {
             cb(null, [
                 require('./routes/test1'),
-                require('./routes/test2'),
-                require('./routes/test3'),
                 require('./routes/error')
             ])
         })
@@ -22,7 +20,6 @@ module.exports = {
     //当前路由返回的控件
     getComponent(location, cb) {
         require.ensure([], (require) => {  
-            //   cb(null, require('./components/Calendar'))
             cb(null, require('./components/Layout'))
         })
     }

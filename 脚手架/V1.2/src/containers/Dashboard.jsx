@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 
 class Dashboard extends React.Component {
   render() {
-    const { courses } = this.props
 
     return (
       <div>
@@ -15,14 +14,6 @@ class Dashboard extends React.Component {
           This way, a new route added deep in your app will not affect the
           initial bundle of your application.
         </p>
-        <h2>Courses</h2>{' '}
-        <ul>
-          {courses.map(course => (
-            <li key={course.id}>
-              <Link to={`/course/${course.id}`}>{course.name}</Link>
-            </li>
-          ))}
-        </ul>
       </div>
     )
   }

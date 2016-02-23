@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+//一些默认的样式，可以放在 css 文件里面，这里设置 className
 const dark = 'hsl(200, 20%, 20%)'
 const light = '#fff'
 const styles = {}
@@ -43,8 +44,6 @@ class GlobalNav extends React.Component {
         <div style={{ float: 'left' }}>
           <Link to="/" style={styles.link}>Home</Link>{' '}
           <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>Calendar</Link>{' '}
-          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>Grades</Link>{' '}
-          <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>Messages</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>
           <Link style={styles.link} to="/profile">{user.name}</Link> <button onClick={this.logOut}>log out</button>
